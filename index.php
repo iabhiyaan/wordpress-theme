@@ -11,14 +11,15 @@
         </h2>
         <div>
             Posted on:
-                <a href="<?php the_permalink() ?>">
-                   <time datetime="<?php echo the_date
-                                   ?>"></time>
-                    
+                <a href="<?php the_permalink(); ?>">
+                   <time datetime="<?php get_the_date('c') ?>">
+                   <?php echo get_the_date(); ?>
+                   </time>
                 </a>
         </div>
         <div>
-            <?php the_excerpt() ?>
+            <?php the_excerpt();
+             ?>
         </div>
     <?php } ?>    
 <?php } else ?>
