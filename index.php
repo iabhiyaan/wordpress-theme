@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <?php if(have_posts()) { ?>
@@ -16,6 +15,10 @@
                    <?php echo get_the_date(); ?>
                    </time>
                 </a>
+          &nbsp;  By :
+                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>">
+                    <?php echo get_the_author(); ?>
+                </a>
         </div>
         <div>
             <?php the_excerpt();
@@ -23,5 +26,5 @@
         </div>
     <?php } ?>    
 <?php } else ?>
-    <?php '<p> Sorry I yo have no posts </p>'  ?>      
+    <?php '<p> Sorry I youhave no posts </p>'  ?>
 <?php get_footer(); ?>
